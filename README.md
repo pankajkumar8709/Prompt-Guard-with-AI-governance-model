@@ -297,10 +297,49 @@ Notes:
 
 ## 📚 Tech Stack
 
-- **Backend**: Python 3.11, FastAPI, Groq LLMs.
-- **Governance**: custom self‑governance prompt + fast rules + optional legacy 7‑layer.
-- **Frontend**: React, Vite, modern component styling.
-- **Testing**: pytest, custom prompt suites and CLI harness.
+### Backend
+
+| Category | Technology |
+|----------|------------|
+| **Runtime** | Python 3.11+ |
+| **API framework** | FastAPI |
+| **ASGI server** | Uvicorn |
+| **Validation** | Pydantic |
+| **LLM provider** | Groq (e.g. `llama-3.1-8b-instant`, `llama-3.3-70b-versatile`) |
+| **Agent orchestration** | LangGraph (`StateGraph`), LangChain Core (tools) |
+| **Agent tooling** | LangChain Core, LangChain Anthropic (optional) |
+| **HTTP client** | httpx |
+| **Rate limiting** | SlowAPI |
+| **Embeddings / threat memory** | sentence-transformers (`all-MiniLM-L6-v2`), PyTorch, Transformers |
+| **Numerical** | NumPy |
+| **Database** | SQLite (stdlib `sqlite3`); aiosqlite in deps |
+| **Testing** | pytest |
+
+### Frontend
+
+| Category | Technology |
+|----------|------------|
+| **Framework** | React 19 |
+| **Build** | Vite 7 |
+| **Language** | TypeScript 5.9 |
+| **Routing** | React Router 7 |
+| **Data fetching** | TanStack React Query 5 |
+| **HTTP client** | Axios |
+| **Animations** | Framer Motion |
+| **Charts** | Chart.js, react-chartjs-2 |
+| **3D (Globe)** | Three.js, @react-three/fiber, @react-three/drei |
+| **Icons** | Lucide React |
+| **Styling** | Tailwind CSS 3, PostCSS, Autoprefixer |
+| **Utilities** | clsx |
+| **Fonts** | Google Fonts (Syne, DM Sans, Space Mono) |
+
+### DevOps / Tooling
+
+| Category | Technology |
+|----------|------------|
+| **Linting (frontend)** | ESLint, TypeScript ESLint |
+| **Launcher** | run.bat (Windows) |
+| **Environment** | Python venv; Vite `VITE_API_BASE_URL` |
 
 ---
 
