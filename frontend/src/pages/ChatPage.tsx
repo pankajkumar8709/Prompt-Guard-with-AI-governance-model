@@ -503,21 +503,25 @@ export function ChatPage() {
                               {Math.round(m.meta.inference_ms)}ms
                             </span>
                           )}
-                          {(m.meta.explanation || (m.meta as any).explainable_decision) && (
+                          {m.meta.explanation && (
                             <button
                               onClick={() => setExpandedExplainId((id) => (id === m.id ? null : m.id))}
                               className="text-[10px] text-cyan-400 hover:underline flex items-center gap-0.5"
                             >
-                              {expandedExplainId === m.id ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+                              {expandedExplainId === m.id ? (
+                                <ChevronUp className="w-3 h-3" />
+                              ) : (
+                                <ChevronDown className="w-3 h-3" />
+                              )}
                               Why?
                             </button>
                           )}
                         </div>
-                      )}
-                      {!isUser && m.meta && expandedExplainId === m.id && (
-                        <div className="mt-2 px-2 py-2 rounded-lg bg-[#0D0F17] border border-[#252A3A] text-[11px] text-gray-300">
-                          {(m.meta.explanation || (m.meta as any).explainable_decision) || '—'}
-                        </div>
+                        {m.meta.explanation && expandedExplainId === m.id && (
+                          <div className="mt-2 px-2 py-2 rounded-lg bg-[#0D0F17] border border-[#252A3A] text-[11px] text-gray-300">
+                            {m.meta.explanation || '—'}
+                          </div>
+                        )}
                       )}
                     </div>
                   </motion.div>
