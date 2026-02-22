@@ -1,0 +1,27 @@
+# Core dependencies
+torch
+transformers
+
+# API framework
+fastapi
+uvicorn
+
+# Enterprise features
+slowapi
+aiosqlite
+
+# LLM providers
+groq
+httpx
+
+# Agentic security graph
+langgraph
+langchain-core
+langchain-anthropic
+
+# Threat Intelligence Memory
+sentence-transformers
+numpy
+
+# Testing
+pytest

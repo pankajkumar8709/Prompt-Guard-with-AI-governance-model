@@ -1,0 +1,19 @@
+{
+  "tenant_id": "retail",
+  "strict_mode": true,
+  "injection_threshold": 0.98,
+  "jailbreak_threshold": 0.90,
+  "rate_limit": 100,
+  "suspicious_action": "warn",
+  "whitelist": [
+    "account balance",
+    "last transactions",
+    "apply for home loan",
+    "reset pin",
+    "upi"
+  ],
+  "hard_block": {
+    "require_transaction_object": true,
+    "advisory_question_exceptions": true
+  }
+}

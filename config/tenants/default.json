@@ -1,0 +1,32 @@
+{
+  "tenant_id": "default",
+  "strict_mode": true,
+  "injection_threshold": 0.99,
+  "jailbreak_threshold": 0.90,
+  "rate_limit": 60,
+  "suspicious_action": "sanitize",
+  "whitelist": [
+    "account balance",
+    "available balance",
+    "transactions",
+    "statement",
+    "mini statement",
+    "apply for loan",
+    "loan interest rate",
+    "reset pin",
+    "fixed deposit",
+    "fd interest rate",
+    "credit card",
+    "debit card",
+    "net banking",
+    "mobile banking",
+    "upi",
+    "kyc status",
+    "update address",
+    "branch hours"
+  ],
+  "hard_block": {
+    "require_transaction_object": true,
+    "advisory_question_exceptions": true
+  }
+}

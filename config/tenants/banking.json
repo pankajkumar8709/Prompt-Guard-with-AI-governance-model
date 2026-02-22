@@ -1,0 +1,24 @@
+{
+  "tenant_id": "banking",
+  "strict_mode": true,
+  "injection_threshold": 0.95,
+  "jailbreak_threshold": 0.90,
+  "rate_limit": 30,
+  "suspicious_action": "block",
+  "whitelist": [
+    "account balance",
+    "transactions",
+    "mini statement",
+    "apply for loan",
+    "loan interest rate",
+    "reset pin",
+    "fixed deposit",
+    "credit card",
+    "debit card",
+    "upi"
+  ],
+  "hard_block": {
+    "require_transaction_object": true,
+    "advisory_question_exceptions": true
+  }
+}
